@@ -19,9 +19,11 @@
    
  }
  
- const reduceToTotal = function (sourceArray, startingPoint){
-   let result = sourceArray.reduce()
- }
+ function reduceToTotal(sourceArray, startingPoint = 0){
+    const reducer = function(accumulator, currentValue){ return accumulator + currentValue }
+
+    return sourceArray.reduce(reducer, startingPoint)
+}
  function reduceToAllTrue(sourceArray){
 
     const reducer = function(accumulator, currentValue){  
